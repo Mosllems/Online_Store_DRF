@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test View</title>
+</head>
+<body>
+{% for customer in customers %}
+    {{ customer.first_name }}
+    <br>
+    {{ customer.Last_name }}
+    <br>
+    {{ customer.email }}
+    <br>
+{% endfor %}
+</body>
+</html>

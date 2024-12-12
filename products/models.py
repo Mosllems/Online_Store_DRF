@@ -30,6 +30,9 @@ class Customer(models.Model):
     phone_number = models.CharField(max_length=255)
     birth_date = models.DateField()
 
+    def __str__(self):
+        return self.first_name
+
 class Address(models.Model):
     customer = models.OneToOneField(Customer, on_delete=models.CASCADE, primary_key=True)
     province = models.CharField(max_length=255)

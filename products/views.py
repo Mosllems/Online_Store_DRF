@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Customer
+
+def test(request):
+    customers = Customer.objects.all()
+
+    return render(request, "products/test.html", {'customers':customers})
